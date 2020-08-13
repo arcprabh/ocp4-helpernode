@@ -71,6 +71,9 @@
     template:
       src: ../templates/zonefile.j2
       dest: /var/named/zonefile.db
+      owner: root
+      group: root
+      mode: 0644
     notify:
       - restart bind
   
@@ -78,6 +81,9 @@
     template:
       src: ../templates/reverse.j2
       dest: /var/named/reverse.db
+      owner: root
+      group: root
+      mode: 0644
     notify:
       - restart bind
   
